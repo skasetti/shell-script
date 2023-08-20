@@ -2,8 +2,8 @@
 
 echo "Hello World, I am learning DevOps with AWS"
 
-PERSON1=Ramesh
-PERSON2=Suresh
+PERSON1=$1 # this is the first value from command line
+PERSON2=$2 # this is the second value from command line
 
 echo "Hi $PERSON1, Good morning $PERSON2"
 
