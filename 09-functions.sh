@@ -23,10 +23,11 @@ then
 #     echo "INFO:: You are root user"
 fi
 
+# it is our responsibility again to check installation is successor not
 yum install mysql -y
 
-VALIDATE $?
+VALIDATE $? "Installing MySql"
 
 yum install postfix -y
 
-VALIDATE $?
+VALIDATE $? "Installing postfix"
