@@ -23,9 +23,9 @@ do
     # this command will give you usage in number format comparison
     usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
     # this command will give us partition
-    partition=$(echo $line | awk "{print $1}")
+    partition=$(echo $line | awk '{print $1}')
     #now you need to check whether it is more than threshold ot not
-    if [ $usage -gt $DISK_USAGE_THRESHOLD];
+    if [ $usage -gt $DISK_USAGE_THRESHOLD] ;
     then
         message+="HIGH DISK USAGE ON $partition: $usage"
     fi    
