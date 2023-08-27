@@ -3,7 +3,7 @@
 #anyone in your project can call this script with arguments
 # mail.sh TO_ADRES SUBJECT BODY TEAM_NAME ALERT_TYPE
 
-TO_ADRESS=$1
+TO_ADDRESS=$1
 SUBJECT=$2
 BODY=$(sed -e 's/[]\/$*.^[]/\\&/g' <<< $3)
 echo "escaped content: $BODY"
