@@ -33,4 +33,8 @@ done <<< $DISK_USAGE
 
     echo -e "message: $message"
 
-    echo "$message" | mail -s "HIGH DISK USAGE" skasetti@gmail.com
+    #echo "$message" | mail -s "HIGH DISK USAGE" skasetti@gmail.com
+
+# how to call other shell script from your current script
+
+sh mail.sh skasetti@gmail.com "High Disk Usage" "$message" "DEVOPS TEAM" "High Disk Usage"
