@@ -15,3 +15,10 @@ N="\e[32m"
 Y="\e[33m"
 
 DISK_USAGE=$(df -hT |grep -vE 'tmpfs|Filesystem')
+DISK_USAGE_THRESHHOLD=1
+
+#IFS= means internal field separator is space.
+while IFS= read line
+do
+    echo "output: $line"
+done <<< $DISK_USAGE
